@@ -1,0 +1,184 @@
+/* Style Guide:
+
+===== LAYOUT
+Mobile  => 375px
+Desktop => 1440px
+
+===== PURPLE COLORS
+Background     => hsl(233, 47%, 7%)
+Card backround => hsl(244, 38%, 16%)
+Accent         => hsl(277, 64%, 61%)
+
+===== FOREGROUND COLORS
+Main           => hsl(0, 0%, 100%)
+Main paragraph => hsla(0, 0%, 100%, 0.75)
+Stat headings  => hsla(0, 0%, 100%, 0.6)
+
+===== FONTS
+Cart title(700), Stat headings => Inter
+Description, rest   => Lexend Deca
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Helvetica, sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #090b1a;
+  position: relative;
+  height: 100vh;
+}
+
+.container {
+  width: 375px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 90%;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1b1938;
+}
+
+.card__picture {
+  background-color: #aa5cdb;
+  opacity: 0.667;
+  position: relative;
+}
+
+.card__picture img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  mix-blend-mode: overlay;
+}
+
+.card__container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.card__slogan {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.card__slogan__accent {
+  color: #aa5cdb;
+}
+
+.card__description {
+  font-family: "Lexend Deca", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  padding-block: 1.5rem;
+}
+
+.card__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__stats__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__stats__category__number {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card__stats__category__heading {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.75px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 100%;
+  }
+  .card {
+    width: 1440px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .card > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .card__container {
+    text-align: left;
+    padding: 6rem 6rem 0 6rem;
+  }
+  .card__slogan {
+    font-size: 3rem;
+  }
+  .card__description {
+    padding-top: 2.5rem;
+    font-size: 1.25rem;
+  }
+  .card__stats {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 5.75rem;
+  }
+  .card__stats__category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 4.5rem;
+  }
+  .card__stats__category__number {
+    font-size: 2rem;
+  }
+  .card__stats__category__heading {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

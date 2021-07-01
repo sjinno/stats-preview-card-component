@@ -1,0 +1,180 @@
+/* Style Guide:
+
+===== LAYOUT
+Mobile  => 375px
+Desktop => 1440px
+
+===== PURPLE COLORS
+Background     => hsl(233, 47%, 7%)
+Card backround => hsl(244, 38%, 16%)
+Accent         => hsl(277, 64%, 61%)
+
+===== FOREGROUND COLORS
+Main           => hsl(0, 0%, 100%)
+Main paragraph => hsla(0, 0%, 100%, 0.75)
+Stat headings  => hsla(0, 0%, 100%, 0.6)
+
+===== FONTS
+Cart title(700), Stat headings => Inter
+Description, rest   => Lexend Deca
+*/
+
+$main-font-stack: Inter,
+Helvetica,
+sans-serif;
+$secondary-font-stack: 'Lexend Deca',
+Helvetica,
+sans-serif;
+
+$main-font-size: 15px;
+
+$main-background-color: hsl(233, 47%, 7%);
+$card-background-color: hsl(244, 38%, 16%);
+
+$accent-color: hsl(277, 64%, 61%);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $main-font-stack;
+    font-size: $main-font-size;
+    color: hsl(0, 0%, 100%);
+    background-color: $main-background-color;
+
+    position: relative;
+    height: 100vh;
+}
+
+
+.container {
+    width: 375px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 90%;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $card-background-color;
+
+    &__picture {
+        background-color: $accent-color;
+        opacity: 0.667;
+        position: relative;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            mix-blend-mode: overlay;
+        }
+    }
+
+    &__container {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__slogan {
+        font-weight: 700;
+        font-size: 1.75rem;
+
+        &__accent {
+            color: $accent-color;
+        }
+    }
+
+    &__description {
+        font-family: $secondary-font-stack;
+        color: hsla(0, 0%, 100%, 0.75);
+        padding-block: 1.5rem;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+
+        &__category {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &__number {
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+
+            &__heading {
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                letter-spacing: 0.75px;
+                color: hsla(0, 0%, 100%, 0.6);
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 100%;
+    }
+
+    .card {
+        width: 1440px;
+        flex-direction: row-reverse;
+
+        &>* {
+            flex-basis: 100%;
+        }
+
+        &__container {
+            text-align: left;
+            padding: 6rem 6rem 0 6rem;
+        }
+
+        &__slogan {
+            font-size: 3rem;
+        }
+
+        &__description {
+            padding-top: 2.5rem;
+            font-size: 1.25rem;
+        }
+
+        &__stats {
+            flex-direction: row;
+            gap: 5.75rem;
+
+            &__category {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding-top: 4.5rem;
+
+                &__number {
+                    font-size: 2rem;
+                }
+
+                &__heading {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
