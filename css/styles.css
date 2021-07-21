@@ -29,6 +29,7 @@ body {
   background-color: #1b1938;
   width: 90%;
   margin-inline: auto;
+  padding-block: 2rem 1rem;
 }
 
 .card__title {
@@ -49,7 +50,7 @@ body {
 }
 
 .container {
-  padding: 2rem;
+  padding-inline: 2rem;
 }
 
 .stat {
