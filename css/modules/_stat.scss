@@ -1,0 +1,20 @@
+.stat {
+    text-align: center;
+    padding-bottom: 1.5rem;
+
+    &__number {
+        font-family: $ff-inter;
+        font-weight: $fw-bold;
+        font-size: 1.5625rem;
+        color: $clr-white;
+        padding-bottom: 0.5rem;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        color: $clr-slightly-transparent-white;
+        font-family: $ff-lexend-deca;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+}
