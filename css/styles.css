@@ -43,7 +43,7 @@ body {
 
 .card__description {
   font-family: "Lexend Deca";
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.6875;
   padding-bottom: 2.75rem;
   text-align: center;
