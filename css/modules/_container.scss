@@ -1,3 +1,12 @@
 .container {
     padding-inline: 1.75rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        text-align: left;
+        padding-top: 4rem;
+        padding-inline: 7rem;
+    }
 }

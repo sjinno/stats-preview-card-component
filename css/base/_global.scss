@@ -11,6 +11,7 @@ html {
 body {
     font-size: 1.5rem;
     background-color: $clr-very-dark-blue;
+    min-height: calc(100vh - 5rem);
     position: relative;
 }
 
@@ -29,4 +30,13 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: $ff-lexend-deca;
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }

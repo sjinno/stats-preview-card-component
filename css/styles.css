@@ -15,6 +15,7 @@ html {
 body {
   font-size: 1.5rem;
   background-color: #090b1a;
+  min-height: calc(100vh - 5rem);
   position: relative;
 }
 
@@ -41,12 +42,22 @@ footer {
   font-family: "Lexend Deca";
 }
 
+@media screen and (min-width: 1440px) {
+  main {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
 .accent {
   color: #aa5cdb;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -57,6 +68,7 @@ footer {
 .card {
   background-color: #1b1938;
   width: 88%;
+  max-width: 33rem;
   margin-inline: auto;
   padding-bottom: 1.5rem;
   border-radius: 0.8rem;
@@ -82,9 +94,7 @@ footer {
   color: white;
   font-size: 2.8rem;
   padding-block: 4.8rem 2.4rem;
-  text-align: center;
   width: 95%;
-  margin-inline: auto;
 }
 
 .card__description {
@@ -92,18 +102,60 @@ footer {
   color: rgba(255, 255, 255, 0.75);
   line-height: 2.4rem;
   padding-bottom: 4.8rem;
-  text-align: center;
   opacity: 0.9;
   width: 95%;
-  margin-inline: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 77%;
+    max-width: 111rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-bottom: 0;
+  }
+  .card__image {
+    width: 100%;
+    overflow: hidden;
+  }
+  .card__image img {
+    width: 100%;
+  }
+  .card__title {
+    padding-block: 3rem;
+    font-size: 3.5rem;
+  }
+  .card__description {
+    padding-bottom: 6.5rem;
+    width: 90%;
+  }
+  .card__stat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 6.4rem;
+  }
 }
 
 .container {
   padding-inline: 1.75rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    text-align: left;
+    padding-top: 4rem;
+    padding-inline: 7rem;
+  }
 }
 
 .stat {
-  text-align: center;
   padding-bottom: 3.2rem;
 }
 
@@ -120,6 +172,12 @@ footer {
   color: rgba(255, 255, 255, 0.6);
   font-family: "Lexend Deca";
   font-size: 1.2rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.075rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .stat__header {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
