@@ -2,14 +2,29 @@
     background-color: $clr-dark-desaturated-blue;
     width: 90%;
     margin-inline: auto;
-    padding-block: 2rem 1rem;
+    padding-bottom: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;
+
+    &__image {
+        background-color: $clr-soft-violet;
+
+        & img {
+            object-fit: cover;
+            width: 100%;
+            display: block;
+            mix-blend-mode: multiply;
+            opacity: 0.75;
+        }
+    }
 
     &__title {
         font-family: $ff-inter;
         font-weight: $fw-bold;
         color: $clr-white;
         font-size: 1.6875rem;
-        padding-bottom: 1rem;
+        padding-block: 2rem 1rem;
         text-align: center;
     }
 
