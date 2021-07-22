@@ -1,10 +1,9 @@
 .card {
     background-color: $clr-dark-desaturated-blue;
-    width: 90%;
+    width: 88%;
     margin-inline: auto;
-    padding-bottom: 1rem;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.8rem;
     overflow: hidden;
 
     &__image {
@@ -23,16 +22,21 @@
         font-family: $ff-inter;
         font-weight: $fw-bold;
         color: $clr-white;
-        font-size: 1.6875rem;
-        padding-block: 2rem 1rem;
+        font-size: 2.8rem;
+        padding-block: 4.8rem 2.4rem;
         text-align: center;
+        width: 95%;
+        margin-inline: auto;
     }
 
     &__description {
         font-family: $ff-lexend-deca;
         color: $clr-slightly-transparent-white-strong;
-        line-height: 1.6875;
-        padding-bottom: 2.75rem;
+        line-height: 2.4rem;
+        padding-bottom: 4.8rem;
         text-align: center;
+        opacity: 0.9;
+        width: 95%;
+        margin-inline: auto;
     }
 }

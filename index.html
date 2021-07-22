@@ -14,42 +14,47 @@
 </head>
 
 <body>
-  <div class="card">
+  <main>
+    <div class="card">
+      <div class="card__image">
+        <picture>
+          <source srcset="images/image-header-desktop.jpg" media="(min-width: 1440px)">
+          <img src="images/image-header-mobile.jpg" alt="work atmosphere">
+        </picture>
+      </div>
 
-    <div class="card__image">
-      <picture>
-        <source srcset="images/image-header-desktop.jpg" media="(min-width: 1440px)">
-        <img src="images/image-header-mobile.jpg" alt="work atmosphere">
-      </picture>
-    </div>
+      <div class="container">
+        <h1 class="card__title">Get <span class="accent">insights</span> that help your business grow.</h1>
 
-    <div class="container">
-      <h1 class="card__title">Get <span class="accent">insights</span> that help your business grow.</h1>
+        <p class="card__description">Discover the benefits of data analytics and make better decisions regarding
+          revenue,
+          customer
+          experience, and overall efficiency.</p>
 
-      <p class="card__description">Discover the benefits of data analytics and make better decisions regarding revenue,
-        customer
-        experience, and overall efficiency.</p>
-
-      <div class="card__stat">
-        <div class="stat">
-          <p class="stat__number">10k+</p>
-          <p class="stat__header">companies</p>
-        </div>
-        <div class="stat">
-          <p class="stat__number">314</p>
-          <p class="stat__header">templates</p>
-        </div>
-        <div class="stat">
-          <p class="stat__number">12M+</p>
-          <p class="stat__header">queries</p>
+        <div class="card__stat">
+          <div class="stat">
+            <p class="stat__number">10k+</p>
+            <p class="stat__header">companies</p>
+          </div>
+          <div class="stat">
+            <p class="stat__number">314</p>
+            <p class="stat__header">templates</p>
+          </div>
+          <div class="stat">
+            <p class="stat__number">12M+</p>
+            <p class="stat__header">queries</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/sjinno">sjinno</a>.
+    </div>
+  </footer>
 </body>
 
 </html>
