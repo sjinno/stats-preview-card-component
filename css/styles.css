@@ -127,11 +127,11 @@ footer {
     width: 100%;
   }
   .card__title {
-    padding-block: 3rem;
-    font-size: 3.5rem;
+    padding-block: 2.8rem;
+    font-size: 3.6rem;
   }
   .card__description {
-    padding-bottom: 6.5rem;
+    padding-bottom: 6rem;
     width: 90%;
   }
   .card__stat {
