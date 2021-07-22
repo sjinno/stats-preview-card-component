@@ -20,6 +20,10 @@
 
 @media screen and (min-width: 1440px) {
    .stat {
+       &__number {
+        font-size: 2.55rem;
+       }
+
        &__header {
            font-size: 1.3rem;
        }
